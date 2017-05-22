@@ -4,9 +4,9 @@ const webpack = require('webpack');
 const webpackConfig = require('./webpack.config.js');
 const app = express();
 
-console compiler = webpack(webpackConfig);
+const compiler = webpack(webpackConfig);
 
-app.use(express.static(__dirname, '/client'));
+app.use(express.static(__dirname + '/client'));
 
 app.use(webpackDevMiddleware(compiler, {
   hot: true,
