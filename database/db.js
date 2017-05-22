@@ -10,7 +10,6 @@ exports.connect = (url, done) => {
   MongoClient.connect(url, (err, db) => {
     if (err) return done(err)
     state.db = db;
-    console.log(db);
     done()
   })
 }
