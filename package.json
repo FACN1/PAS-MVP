@@ -1,0 +1,29 @@
+{
+  "name": "pas",
+  "version": "1.0.0",
+  "description": "Park and Sleep production",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FACN1/PAS-MVP.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FACN1/PAS-MVP/issues"
+  },
+  "homepage": "https://github.com/FACN1/PAS-MVP#readme",
+  "dependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "express": "^4.15.3",
+    "webpack": "^2.5.1",
+    "webpack-dev-middleware": "^1.10.2"
+  }
+}
