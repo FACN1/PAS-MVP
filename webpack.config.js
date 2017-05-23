@@ -3,10 +3,10 @@ const path = require('path');
 module.exports = {
   context: path.join(__dirname, 'src'),
   entry: [
-    './main.js',
+    './index.jsx',
   ],
   output: {
-    path: path.join(__dirname, 'client'),
+    path: path.join(__dirname, 'public'),
     filename: 'bundle.js',
   },
   module: {
@@ -14,12 +14,12 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loaders: ['eslint-loader', 'babel-loader'],
+        loaders: ['babel-loader'],
       },
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loader: 'react-hot-loader!babel-loader'
+        loader: 'react-hot-loader!babel-loader',
       },
     ],
   },
