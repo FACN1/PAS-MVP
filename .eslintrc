@@ -1,6 +1,15 @@
 {
-parser: "babel-eslint",
-"rules": {
-
-  }
+  parser: "babel-eslint",
+  "rules": {
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
+  },
+  "extends": ["airbnb-base"],
+  "globals": {
+    "document": true,
+    "done": true,
+    },
+  "plugins": [
+    "react"
+  ],
 }
