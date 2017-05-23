@@ -23,7 +23,6 @@ Park and Sleep production
   "babel-eslint": "^7.2.3",
   "eslint": "^3.19.0",
   "eslint-config-airbnb": "^14.1.0",
-  "eslint-loader": "^1.7.1",
   "eslint-plugin-import": "^2.2.0",
   "eslint-plugin-jsx-a11y": "^4.0.0",
   "eslint-plugin-react": "^6.10.3",
@@ -79,10 +78,10 @@ const path = require('path');
 module.exports = {
   context: path.join(__dirname, 'src'),
   entry: [
-    './main.js',
+    './index.js',
   ],
   output: {
-    path: path.join(__dirname, 'client'),
+    path: path.join(__dirname, 'public'),
     filename: 'bundle.js',
   },
   module: {
@@ -90,7 +89,7 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loaders: ['eslint-loader', 'babel-loader'],
+        loaders: ['babel-loader'],
       },
       {
         test: /\.jsx?$/,
@@ -116,3 +115,24 @@ module.exports = {
 **module.rules:** specifies how each file need to be processed before it is combined into your bundle.js
 
 **resolve:** this where webpack should look for files referenced by and `import` or `require()` statement.
+
+##### .eslintrc
+
+```json
+{
+  parser: "babel-eslint",
+  "rules": {
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
+  },
+  "extends": ["airbnb-base"],
+  "globals": {
+    "document": true,
+    "done": true,
+    },
+  "plugins": [
+    "react"
+  ],
+}
+```
+**Lints react and jsx**
