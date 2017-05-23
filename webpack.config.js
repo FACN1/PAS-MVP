@@ -10,7 +10,7 @@ module.exports = {
     filename: 'bundle.js',
   },
   module: {
-    loaders:[
+    rules: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
@@ -20,15 +20,6 @@ module.exports = {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         loader: 'react-hot-loader!babel-loader'
-      },
-    ],
-    rules: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: [
-          'babel-loader',
-        ],
       },
     ],
   },
