@@ -1,6 +1,11 @@
 import React from 'react';
 import Counter from './components/counter.jsx';
 
-const App = () => <Counter />;
+const App = () =>
+  (
+    <div>
+      <Counter />
+    </div>
+  );
 
 export default App;

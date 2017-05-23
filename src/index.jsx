@@ -1,10 +1,14 @@
 import React from 'react';
 import { render } from 'react-dom';
-import App from './app.jsx';
+import { BrowserRouter } from 'react-router-dom';
+import Routes from './routes.jsx';
 
 document.addEventListener('DOMContentLoaded', () => {
-  render(
-    <App />,
+  render((
+    <BrowserRouter>
+        <Routes />
+    </BrowserRouter>
+    ),
     document.getElementById('root'),
   );
 });
