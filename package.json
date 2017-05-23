@@ -26,8 +26,8 @@
   "homepage": "https://github.com/FACN1/PAS-MVP#readme",
   "dependencies": {
     "babel-core": "^6.24.1",
-    "babel-preset-latest": "^6.24.1",
     "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.5.1",
     "babel-preset-react": "^6.24.1",
     "express": "^4.15.3",
     "mongodb": "^2.2.26",
