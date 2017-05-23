@@ -4,20 +4,24 @@ const DB_URL = require('./url.js');
 
 // connects with the remote database in mongodb website atlas
 MongoClient.connect(DB_URL, (err, db) => {
-  if(err) throw err;
+  if (err) throw err;
 
   // creates a collection/table named guestHouse in the databse GuestHouse
-  const guestHouse = db.collection('GuestHouse')
+  const guestHouse = db.collection('GuestHouse');
   // if collection exists drop it
-  guestHouse.find({name: 'daher'}).toArray((error, documents) => {
+  guestHouse.find({ name: 'daher' }).toArray((error, documents) => {
     if (documents) {
       guestHouse.drop();
-    };
+    }
   });
   // inserts data to the collection
-  guestHouse.insert({name: 'daher', tasty: true}, (err, result) => {
+  guestHouse.insert({ name: 'daher', tasty: true }, (insertErr) => {
+    if (insertErr) throw insertErr;
     // searches through the collection to make sure that the data that we inserted is there
-    guestHouse.find({name: 'daher'}).toArray((err, docs) => {
+    guestHouse.find({ name: 'daher' }).toArray((findErr, docs) => {
+      if (findErr) throw findErr;
+      // this shows us that table was created
+      console.log(docs);
       db.close();
     });
   });
