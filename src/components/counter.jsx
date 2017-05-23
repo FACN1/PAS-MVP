@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 class Counter extends Component {
-  constructor(){
+  constructor() {
     super();
 
     this.state = {
@@ -9,7 +9,7 @@ class Counter extends Component {
     };
   }
   render() {
-    return(
+    return (
       <button
         onClick={() => {
           this.setState({ count: this.state.count + 1 });

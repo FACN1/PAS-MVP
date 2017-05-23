@@ -1,10 +1,10 @@
 import React from 'react';
 import { render } from 'react-dom';
-import Counter from './components/counter';
+import App from './app.jsx';
 
 document.addEventListener('DOMContentLoaded', () => {
   render(
-    React.createElement(Counter),
-    document.getElementById('root')
+    <App />,
+    document.getElementById('root'),
   );
 });
