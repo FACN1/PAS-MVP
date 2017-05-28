@@ -42,7 +42,7 @@ Park and Sleep production
 
 **react-dom:** provides DOM specific react methods.
 
-**webpack:** bundles all your files together into 1 file and works with babel to convert es6 to es5.
+**webpack:** is a module bundler. This means webpack takes modules with dependencies and emits static assets representing those modules.
 
 **webpack-dev-middleware:** its a small middleware for a connect bases middleware stack (allows you to run webpack with a server). Recompiles your bundle.js on every file change and serves them from memory.
 
