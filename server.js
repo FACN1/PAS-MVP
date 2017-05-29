@@ -41,7 +41,6 @@ app.get('/api', (request, response) => {
   const guestHouse = data.collection('GuestHouse');
   guestHouse.find({ }).toArray((error, documents) => {
     result = documents[0].GuestHouses;
-    console.log(result);
     response.send(result);
   });
 });
