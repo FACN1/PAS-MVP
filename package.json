@@ -6,7 +6,7 @@
   "scripts": {
     "test": "babel-node node_modules/.bin/tape tests/components.jsx | faucet",
     "compile": "webpack",
-    "start": "node server.js",
+    "start": "./node_modules/babel-cli/bin/babel-node.js ./server.js",
     "precommit-msg": "echo 'Pre-commit checks..' && exit 0",
     "lint": "eslint ./ --ignore-pattern .gitignore"
   },
@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/FACN1/PAS-MVP#readme",
   "dependencies": {
+    "axios": "^0.16.1",
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
     "babel-preset-env": "^1.5.1",
