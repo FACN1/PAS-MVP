@@ -2,3 +2,4 @@ node_modules/
 client/build.js
 npm-debug.log
 database/url.js
+public/bundle.js

@@ -1,10 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  context: path.join(__dirname, 'src'),
-  entry: [
-    './index.jsx',
-  ],
+  entry: './src/index.jsx',
   output: {
     path: path.join(__dirname, 'public'),
     filename: 'bundle.js',
@@ -19,7 +16,7 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loader: 'react-hot-loader!babel-loader',
+        loader: 'babel-loader',
       },
       {
         test: /\.scss$/,
