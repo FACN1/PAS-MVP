@@ -3,20 +3,35 @@ import axios from 'axios';
 
 import Header from '../components/header.jsx';
 import TextBox from '../components/text_box.jsx';
-import SearchBar from '../components/search_bar.jsx';
+import SearchList from '../components/search_list.jsx';
 
 
 class SelectGuesthouse extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      db: {},
+      db: [],
+      currentGuestHouse: {},
     };
+    this.currentGuestHouse = this.currentGuestHouse.bind(this);
+  }
+
+  currentGuestHouse(guestHouse) {
+    const current = this.state.db.filter((curr) => {
+      if (curr.name === guestHouse) {
+        return curr;
+      }
+      return current;
+    });
+    this.setState({
+      currentGuestHouse: current,
+    });
   }
 
   componentDidMount() {
     axios.get('/api')
     .then((res) => {
+      // console.log(res.data);
       this.setState({ db: res.data });
     });
   }
@@ -26,7 +41,9 @@ class SelectGuesthouse extends Component {
       <div>
         <Header />
         <TextBox />
-        <SearchBar guesthouses={this.state.db} />
+        <SearchList
+          db={this.state.db}
+          updateCurrent={this.currentGuestHouse} />
       </div>
     );
   }
