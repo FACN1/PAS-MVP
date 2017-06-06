@@ -6,7 +6,8 @@
   "scripts": {
     "test": "babel-node node_modules/.bin/tape tests/components.jsx | faucet",
     "compile": "webpack",
-    "start": "./node_modules/babel-cli/bin/babel-node.js ./server.js",
+    "start": "node ./server.js",
+    "dev": "nodemon ./server.js",
     "precommit-msg": "echo 'Pre-commit checks..' && exit 0",
     "lint": "eslint ./ --ignore-pattern .gitignore"
   },
