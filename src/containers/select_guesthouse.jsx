@@ -10,6 +10,8 @@ class SelectGuesthouse extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      title: 'PAS',
+      tagLine: 'Park & Sleep',
       db: [],
       currentGuestHouse: {},
     };
@@ -17,9 +19,9 @@ class SelectGuesthouse extends Component {
   }
 
   currentGuestHouse(guestHouse) {
-    const current = this.state.db.filter((curr) => {
-      if (curr.name === guestHouse) {
-        return curr;
+    const current = this.state.db.filter((GHouse) => {
+      if (GHouse.name === guestHouse) {
+        return GHouse;
       }
       return current;
     });

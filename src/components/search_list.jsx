@@ -1,25 +1,18 @@
 import React from 'react';
+import SearchButton from './search_button.jsx';
 
-const SearchList = (props) => {
-  const handleClick = (guestHouse) => {
-    props.updateCurrent(guestHouse);
-  };
-  console.log(props);
-
-  return (
+const SearchList = props =>
+  (
     <div>
-      {props.db.map((guestHouses) => {
-        const boundItemClick = handleClick.bind(this, guestHouses.name);
-        return (
-          <button
-            key={guestHouses.name}
-            onClick={boundItemClick}>
-              {guestHouses.name}
-          </button>
-        );
-      })}
+      {props.db.map(guestHouses =>
+        // const boundItemClick = handleClick.bind(this, guestHouses.name);
+        <SearchButton
+          key={guestHouses.name}
+          clickHandler={props.updateCurrent}
+          currentGHouse={guestHouses.name}
+        />,
+      )}
     </div>
   );
-};
 
 export default SearchList;
