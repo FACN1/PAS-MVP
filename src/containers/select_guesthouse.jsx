@@ -12,7 +12,7 @@ class SelectGuesthouse extends Component {
     this.state = {
       title: 'PAS',
       tagLine: 'Park & Sleep',
-      db: [],
+      guestHouseList: [],
       currentGuestHouse: {},
     };
     this.currentGuestHouse = this.currentGuestHouse.bind(this);
@@ -44,7 +44,7 @@ class SelectGuesthouse extends Component {
         <Header />
         <TextBox />
         <SearchList
-          db={this.state.db}
+          db={this.state.guestHouseList}
           updateCurrent={this.currentGuestHouse} />
       </div>
     );
