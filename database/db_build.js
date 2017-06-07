@@ -16,8 +16,8 @@ MongoClient.connect(DB_URL, (err, db) => {
   });
   // inserts data to the collection
   guestHouse.insert({
-    GuestHouses: {
-      Daher: {
+    GuestHouses: [
+      {
         name: 'Daher',
         address: '6098 St 8, Nazareth',
         phone: '052-535-0691',
@@ -32,7 +32,7 @@ MongoClient.connect(DB_URL, (err, db) => {
           longitude: 35.298813,
         },
       },
-      SimSim: {
+      {
         name: 'SimSim',
         address: '632 St 3, Nazareth',
         phone: '077-551-7275',
@@ -47,7 +47,7 @@ MongoClient.connect(DB_URL, (err, db) => {
           longitude: 35.298813,
         },
       },
-      Vitrage: {
+      {
         name: 'Vitrage',
         address: '6083 St 4, Nazareth',
         phone: '04-601-2130',
@@ -62,7 +62,7 @@ MongoClient.connect(DB_URL, (err, db) => {
           longitude: 35.298813,
         },
       },
-    },
+    ],
   }, (insertErr) => {
     if (insertErr) throw insertErr;
     // searches through the collection to make sure that the data that we inserted is there

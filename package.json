@@ -6,7 +6,8 @@
   "scripts": {
     "test": "babel-node node_modules/.bin/tape tests/components.jsx | faucet",
     "compile": "webpack",
-    "start": "./node_modules/babel-cli/bin/babel-node.js ./server.js",
+    "start": "node ./server.js",
+    "dev": "nodemon ./server.js",
     "precommit-msg": "echo 'Pre-commit checks..' && exit 0",
     "lint": "eslint ./ --ignore-pattern .gitignore"
   },
@@ -30,11 +31,14 @@
     "babel-loader": "^7.0.0",
     "babel-preset-env": "^1.5.1",
     "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.2",
     "express": "^4.15.3",
     "mongodb": "^2.2.26",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-router-dom": "^4.1.1",
+    "style-loader": "^0.18.1",
+    "sass-loader": "^6.0.5",
     "webpack": "^2.5.1",
     "webpack-dev-middleware": "^1.10.2"
   },
