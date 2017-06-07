@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="144px" height="144px" viewBox="0 0 144 144" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44 (41411) - http://www.bohemiancoding.com/sketch -->
+    <title>taxi</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iPhone-7" transform="translate(-116.000000, -301.000000)" stroke="#FFFFFF" stroke-width="3">
+            <g id="Group-3" transform="translate(118.000000, 303.000000)">
+                <circle id="Oval-3" cx="70" cy="70" r="70"></circle>
+                <g id="TAXI" transform="translate(19.000000, 24.000000)">
+                    <path d="M16.3206522,75.0449102 L16.3206522,84.8621453 C16.3206522,87.6715938 18.5981602,89.9491018 21.4076087,89.9491018 C24.2170572,89.9491018 26.4945652,87.6715938 26.4945652,84.8621453 L26.4945652,75.0449102 L16.3206522,75.0449102 Z" id="Rectangle-3"></path>
+                    <path d="M15.2228261,48.0808383 L85.7771739,48.0808383 L85.7771739,33.6047904 C85.7771739,21.6533954 76.1257491,11.9670659 64.2228261,11.9670659 L36.7771739,11.9670659 C24.8742509,11.9670659 15.2228261,21.6533954 15.2228261,33.6047904 L15.2228261,48.0808383 Z" id="Rectangle"></path>
+                    <rect id="Rectangle-2" x="1.5" y="49.9790419" width="98" height="24.5449102" rx="12.2724551"></rect>
+                    <path d="M75.6032609,75.3203593 L75.6032609,85.1375944 C75.6032609,87.9470429 77.8807689,90.2245509 80.6902174,90.2245509 C83.4996659,90.2245509 85.7771739,87.9470429 85.7771739,85.1375944 L85.7771739,75.3203593 L75.6032609,75.3203593 Z" id="Rectangle-3"></path>
+                    <ellipse id="Oval" cx="15.6440217" cy="62.5269461" rx="6.86141304" ry="6.88622754"></ellipse>
+                    <ellipse id="Oval" cx="84.8070652" cy="62.5269461" rx="6.86141304" ry="6.88622754"></ellipse>
+                    <path d="M39.923913,11.1706587 L60.5271739,11.1706587 L60.5271739,1.5 L39.923913,1.5 L39.923913,11.1706587 Z" id="Rectangle-4"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
