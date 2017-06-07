@@ -1,41 +1,40 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 
 import Header from '../components/header.jsx';
 import TextBox from '../components/text_box.jsx';
 import SearchList from '../components/search_list.jsx';
 
+// Messing aroung
+import Store from '../state/store';
+import Actions from '../state/actions';
+
 
 class SelectGuesthouse extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      title: 'PAS',
-      tagLine: 'Park & Sleep',
-      guestHouseList: [],
-      currentGuestHouse: {},
-    };
+
     this.currentGuestHouse = this.currentGuestHouse.bind(this);
   }
 
   currentGuestHouse(guestHouse) {
-    const current = this.state.db.filter((GHouse) => {
+    const current = Store.guestHouseList.filter((GHouse) => {
       if (GHouse.name === guestHouse) {
         return GHouse;
       }
       return current;
     });
-    this.setState({
-      currentGuestHouse: current,
-    });
+    Store.currentGuestHouse = current;
+    Store.title = current[0].name;
+    Store.tagLine = current[0].address;
+    // Don't need
+    this.forceUpdate();
   }
 
   componentDidMount() {
-    axios.get('/api')
-    .then((res) => {
-      // console.log(res.data);
-      this.setState({ db: res.data });
-    });
+    Actions.get()
+      .then(() => {
+        this.forceUpdate();
+      });
   }
 
   render() {
@@ -44,7 +43,7 @@ class SelectGuesthouse extends Component {
         <Header />
         <TextBox />
         <SearchList
-          db={this.state.guestHouseList}
+          db={Store.guestHouseList}
           updateCurrent={this.currentGuestHouse} />
       </div>
     );
